@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner</title>
+    <link rel="stylesheet" href="./css/mydothome.css">
+    <script src="https://kit.fontawesome.com/1924b51539.js" crossorigin="anonymous"></script>
+    <style>
+
+      .planner_container {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+          text-align: center;
+      }
+
+      .planner {
+          margin-top: 20px;
+      }
+
+      .task {
+          margin-bottom: 10px;
+          padding: 10px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .task input[type=text] {
+          width: 70%;
+          padding: 5px;
+          margin-right: 10px;
+      }
+
+      .task button{
+          padding: 5px 10px;
+          background-color: #4caf50;
+          color: #fff;
+          border-radius: 3px;
+          cursor: pointer;
+      }
+
+      .task button:first-child:hover {
+          background-color: #45a049;
+      }
+      .task button:nth-child(2){
+        background-color: lightgray;
+        color: #333;
+      }
+      .task button:nth-child(2):hover{
+        background-color: rgb(212, 203, 203);
+      }
+      .task button:last-child{
+        background-color: palevioletred;
+      }
+      .mylist{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 450px;
+      }
+      .mylist .todolist{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header_nav">
+          <div class="header_logo">
+              <a href="./index.html">
+                  <img src="./images/로고.png" alt="" id="logo">
+                  <h3>JAEBIN</h3>
+              </a>
+          </div>
+          <div class="header_content">
+              <div class="navigation">
+                  <ul class="nav">
+                      <li><a href="./resume.html">내 소개</a></li>
+                      <li class="dropdown">
+                          <a href="#">프로젝트</a>
+                          <i class="fa-solid fa-chevron-down"></i>
+                          <i class="fa-solid fa-chevron-up"></i>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">자바 - mvc 프로젝트</a></li>
+                              <li><a href="./솔로의 식탁.html">HTML - 솔로의 식당</a></li>
+                              <li><a href="./8_카페소개.html">HTML - 카페소개</a></li>
+                              <li><a href="./inflearn.html">클론코딩(인프런)</a></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#">다운로드</a>
+                          <i class="fa-solid fa-chevron-down"></i>
+                          <i class="fa-solid fa-chevron-up"></i>
+                          <ul class="dropdown-menu">
+                              <li><a href="https://www.eclipse.org/downloads/packages/release">ECLIPSE</a></li>
+                              <li><a href="https://www.mysql.com/downloads/">MYSQL</a></li>
+                              <li><a href="https://code.visualstudio.com/">VSCODE</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="./플래너.html">플래너</a></li>
+                  </ul>
+              </div>
+              <ul class="login">
+                  <li>
+                      <input type="text" name="" id="">
+                      <button type="submit">
+                          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                      </button>
+                  </li>
+                  <li><a href="./로그인.html">로그인</a></li>
+                  <li><a href="./10. 회원가입.html" type="button">회원가입 하러가기</a></li>
+              </ul>
+              
+          </div>
+          
+          </div>
+      </div>
+    <div class="planner_container">
+      <h1>Planner</h1>
+      <div class="planner">
+        <div class="task">
+          <input type="text" id="list" value="" placeholder="오늘 할 일을 작성하세요" />
+          <button type="button" onclick="addList()">추가하기</button>
+          <button type="button"><a href="./index.html">뒤로가기</a></button>
+          <button type="button" onclick="clearList()">초기화</button>
+        </div>
+      </div>
+    </div>
+    <div class="mylist">
+      <h2 id="todolist"></h2>
+    </div>
+  </body>
+  <script>
+    let todolist = document.getElementById('#todolist');
+    
+    const addList = () => {
+      let inputText = document.getElementById('list').value;
+
+        if (inputText.trim() !== '') {
+
+            let newItem = document.createElement('li');
+            newItem.textContent = inputText;
+
+            document.getElementById('todolist').appendChild(newItem);
+
+            document.getElementById('list').value = '';
+        } else {
+            alert('할 일을 입력해주세요.');
+        }
+    }
+    const clearList = () => {
+      document.getElementById('todolist').innerHTML = ''; 
+  };
+  </script>
+</html>

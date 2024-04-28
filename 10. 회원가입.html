@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./pizza.ico" />
+    <title>회원가입</title>
+    <style>
+        @font-face {
+      font-family: 'KCC-Ganpan';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      }
+      *{
+          font-family: 'KCC-Ganpan';
+      }
+      th{
+        text-align: right;
+        padding: 0 50px 0 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40rem;
+      }
+      caption{
+        font-size: 30px;
+        padding-bottom: 10px;
+      }
+      table {
+        margin: 0 auto;
+        background-color: #A4A4A4;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+      }
+      tr input[type=submit]{
+        background-color: rgb(179, 235, 235);
+        width: 100px;
+        height: 30px;
+        margin-right: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="get">
+      <table>
+        <caption>
+          회원가입
+        </caption>
+        <tr>
+          <th>아이디</th>
+          <td>
+            <input type="text" />
+          </td>
+        </tr>
+        <tr>
+          <th>비밀번호</th>
+          <td><input type="password" name="" id="" /></td>
+        </tr>
+        <tr>
+          <th>이름</th>
+          <td><input type="text" name="" id="" /></td>
+        </tr>
+        <tr>
+          <th>성별</th>
+          <td>
+            <label
+              >남자<input type="radio" name="usergender" id="m" value="M"
+            /></label>
+            <label for="w"
+              >여자<input type="radio" name="usergender" id="w" value="W"
+            /></label>
+          </td>
+        </tr>
+        <tr>
+          <th>핸드폰 번호</th>
+          <td>
+            <input type="tel" name="" id="" />
+            <input type="button" value="인증" />
+          </td>
+        </tr>
+        <tr>
+          <th>우편번호</th>
+          <td>
+            <input type="text" name="" id="" />
+            <input type="button" value="주소찾기" />
+          </td>
+        </tr>
+        <tr>
+          <th>주소</th>
+          <td>
+            <input type="text" name="" id="" /><br />
+            <input type="text" name="" id="" /><br />
+            <input type="text" name="" id="" />
+          </td>
+        </tr>
+        <tr>
+          <th>취미</th>
+          <td>
+            게임하기<input type="checkbox" name="" id="" /> 영화보기<input
+              type="checkbox"
+              name=""
+              id=""
+            />
+            <br />
+            독서하기<input type="checkbox" name="" id="" />
+
+            코딩하기<input type="checkbox" name="" id="" />
+          </td>
+        </tr>
+        <tr>
+          <th>운영진에게 <br />하고 싶은 말</th>
+          <td>
+            <textarea name="" id="" cols="30" rows="10"></textarea><br />
+            <input type="reset" value="리셋" />
+            <input type="submit" value="가입하기" style="margin-left:20px" />
+            <a href="./index.html"><input type="button" value="뒤로가기" /></a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

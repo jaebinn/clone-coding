@@ -4,4 +4,5 @@
 https://www.inflearn.com/
 
 HTML, CSS만 똑같이 클론코딩
-모바일환경 반응형구현
+
+모바일환경 구현(반응형)
